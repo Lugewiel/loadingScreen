@@ -1,0 +1,162 @@
+body {
+    background-color: black;
+}
+
+.loading {
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+    display: flex;
+    z-index: 1000;
+    margin-top: 22%;
+
+}
+
+.loading {
+    animation-name: spintext;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.encadrer {
+    z-index: 1;
+    border: 1px solid;
+    border-color: white;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 19%;
+    /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+}
+
+.encadrer {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.encadrer2 {
+    z-index: 2;
+    border: 1px solid;
+    border-color: white;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 19%;
+    /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+}
+
+.encadrer2 {
+    animation-name: counterspin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counterspin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes spintext {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-180deg);
+    }
+}
+
+.animate__animated.animate__fadeOut {
+    --animate-duration: 3s;
+}
+
+/* fin loading screen */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 10s;
+}
+
+.cadre {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cadre img{
+    margin-left: 43%;
+    margin-top: 10%;
+    width: 200px;
+}
+.cadre p {
+    color: white;
+    text-align: center;
+}
+.cadre button{
+    margin-left: 44%;
+    margin-top: 5%;
+}
+
+.boutonStyle {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial;
+    background: transparent;
+    color: rgb(148, 148, 148);
+    border: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s;
+}
+
+.boutonStyle::after,
+.boutonStyle::before {
+    border: 3px solid rgb(148, 148, 148);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.25s;
+}
+
+.boutonStyle:hover::after {
+    transform: translate(-5px, -5px);
+}
+
+.boutonStyle:hover::before {
+    transform: translate(5px, 5px);
+}
+.cadre a{
+    text-decoration: none;
+    color: white;
+}
+.cadre a:hover{
+    text-decoration: none;
+    color: rgb(21, 0, 255);
+}
